@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('12339.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .chat-container {
+      width: 100%;
+      max-width: 400px;
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 1rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255,255,255,0.2);
+      display: flex;
+      flex-direction: column;
+      height: 90vh;
+    }
+
+    .chat-header {
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 0.5rem;
+    }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .message {
+      max-width: 70%;
+      padding: 10px 15px;
+      border-radius: 15px;
+      font-size: 0.9rem;
+      backdrop-filter: blur(6px);
+      background: rgba(255, 255, 255, 0.3);
+      color: white;
+    }
+
+    .message.user {
+      align-self: flex-end;
+      background: rgba(0, 255, 127, 0.3);
+      color: black;
+    }
+
+    .message.bot {
+      align-self: flex-start;
+    }
+
+    .chat-input {
+      display: flex;
+      margin-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 0.5rem;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 0.6rem;
+      border: none;
+      outline: none;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(6px);
+      color: white;
+    }
+
+    .chat-input button {
+      margin-left: 10px;
+      background: #25D366;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      padding: 0 15px;
+      cursor: pointer;
+    }
+
+    .chat-input button:hover {
+      background: #1ebc59;
+    }
+
+    ::placeholder {
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">📱 Parent-Teacher Chat</div>
+    <div class="chat-messages">
+      <div class="message bot">👋 Hey there! Welcome to our chat.</div>
+      <div class="message user">Thanks! 😍</div>
+      <div class="message bot">You are welcome!</div>
+      <div class="message user">Please how is my child doing?</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" placeholder="Type a message..." />
+      <button>Send</button>
+    </div>
+  </div>
+</body>
+</html>
